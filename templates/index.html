@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>templates</title>
+</head>
+<H1 ALIGN="center">
+    This page for analysing the text
+</H1>
+<! this csrf is used to ensure that the browser is not being hijecked and use by third party >
+<form action="Analyze" method="post">{% csrf_token %}
+
+    <textarea name="text"style="margin: 20px; width: 1251px; height: 79px;"></textarea><br>
+    <input type="checkbox" name="removepunc">Remove Punctuations <br><br>
+    <input type="checkbox" name="fullcaps">UPPER CASE <br><br>
+    <input type="checkbox" name="newline_remover">New Line Remover <br><br>
+    <input type="checkbox" name="char_count">Count Character <br>
+    <button type="submit">Analyse </button>
+</form>
+
+</body>
+
+</html>
